@@ -9,6 +9,7 @@ export class CalculadorabiComponent implements OnInit {
 
   public resultado:string = "";
   public calc:string = "";
+  public history:string= "";
 
   constructor(private validacao:ValidacaoService) { }
 
@@ -27,6 +28,7 @@ export class CalculadorabiComponent implements OnInit {
     bin = eval(this.resultado).toString();
     
     this.calc = this.corrigirBin(String(bin));
+    this.history = this.resultado+"\n"+this.calc;
   }
 
   corrigirBin(binario:string){
@@ -48,9 +50,15 @@ export class CalculadorabiComponent implements OnInit {
     return corrigido.split("").reverse().join("");
   }
 
-  limpar(){
+  limpar(option:string){
+    if (option == 'CE'){
+      this.resultado = "";
+      this.calc = "";
+      this.history = "";
+    }else{
     this.resultado = "";
     this.calc = "";
+    }
   }
 
 }
