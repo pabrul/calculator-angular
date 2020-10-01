@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "calculadora"
+    }
+  },
+  "defaultProject": "calculadora",
+  "cli": {
+    "analytics": "676185f5-12ab-4b4d-a335-1ddf1b096d73"
+  }
 }

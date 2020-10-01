@@ -1,0 +1,46 @@
+<div class="container">
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+
+            <div class="form-group">
+                <input type="text" [(ngModel)]="resultado" class="form-control" readonly="readonly">
+            </div>
+            <div class="form-group">
+                <label>{{calc}}</label>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="calculator">
+        <div class="result">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="resultado" class="form-control" readonly="readonly">
+            </div>
+    
+            <div class="form-group">
+                <label>{{calc}}</label>
+            </div>
+        </div>
+         
+
+        <div class="buttons"> 
+
+            
+
+        <button (click)="montarResultado('0')" type="button" class="btn btn-primary">0</button>
+     
+      
+        <button (click)="montarResultado('1')" type="button" class="btn btn-primary">1</button>
+    
+    
+        <button (click)="montarResultado('+')" type="button" class="btn btn-secondary">+</button>
+    
+    
+        <button (click)="limpar()" type="button" class="btn btn-secondary">CE</button>
+    
+    
+        <button (click)="finalizar()" type="button" class="btn btn-danger">=</button>
+  </div>
+    </div>

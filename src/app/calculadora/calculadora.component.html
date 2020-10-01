@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css" integrity="sha512-glciccPoOqr5mfDGmlJ3bpbvomZmFK+5dRARpt62nZnlKwaYZSfFpFIgUoD8ujqBw4TmPa/F3TX28OctJzoLfg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<div class="container">
+    <div class="col-md-12">
+        <div class="form-group">
+            <input type="text" [(ngModel)]="resultado" class="form-control" readonly="readonly">
+        </div>
+
+        <div class="form-group">
+            <label>{{calc}}</label>
+        </div>
+    </div>
+</div>
+
+    <div class="calculator">   
+
+        <div class="result">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="resultado" class="form-control" readonly="readonly">
+            </div>
+    
+            <div class="form-group">
+                <label>{{calc}}</label>
+            </div>
+        </div>  
+      
+      <div class="buttons"> 
+
+            <div class="operadores">
+                <div><button (click)="montarResultado('+')" type="button" class="operator hvr-float"><span>+</span></button></div>
+                <div><button (click)="montarResultado('-')" type="button" class="operator hvr-float">-</button></div>
+                <div><button (click)="montarResultado('*')" type="button" class="operator hvr-float">*</button></div>
+                <div><button (click)="montarResultado('/')" type="button" class="operator hvr-float">/</button></div>
+            </div>
+
+        <div class="panel">
+
+            <div class="numbers">
+                <button (click)="montarResultado('7')" type="button" class="numbers hvr-buzz text-focus-in">7</button>
+                <button (click)="montarResultado('8')" type="button" class="numbers hvr-buzz text-focus-in">8</button>
+                <button (click)="montarResultado('9')" type="button" class="numbers hvr-buzz text-focus-in">9</button>
+            </div>
+
+            <div class="numbers">
+                <button (click)="montarResultado('4')" type="button" class="numbers hvr-buzz text-focus-in">4</button>
+                <button (click)="montarResultado('5')" type="button" class="numbers hvr-buzz text-focus-in">5</button>
+                <button (click)="montarResultado('6')" type="button" class="numbers hvr-buzz text-focus-in">6</button>
+            </div>
+
+            <div class="numbers">
+                <button (click)="montarResultado('1')" type="button" class="numbers hvr-buzz">1</button>
+                <button (click)="montarResultado('2')" type="button" class="numbers hvr-buzz">2</button>
+                <button (click)="montarResultado('3')" type="button" class="numbers hvr-buzz">3</button>
+            </div>
+
+            <div class="numbers">
+                <button (click)="montarResultado('0')" type="button" class="numbers hvr-buzz">0</button>
+                <button (click)="montarResultado('.')" type="button" class="numbers hvr-buzz">.</button>
+                <button (click)="limpar()" type="button" class="numbers hvr-buzz">CE</button>
+            </div>
+            
+            <div class="equal" id="result">
+                <button (click)="finalizar()" type="button" class="equal pulse" >=</button>
+            </div>
+
+            
+
+            
+
+        </div>
+      
+        
+    </div>
+    </div>
+    
+    

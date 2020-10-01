@@ -1,0 +1,108 @@
+.operadores div {
+    display: inline-block;
+}
+button.operator:hover {
+    background: #007bff;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+    border-color: #aaa;
+}
+
+button.operator {
+    border: 1px solid #bbb;
+    border-radius: 1px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 4px 10px 0;
+    background-color: #ddd;
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+.panel {
+    display: flex;
+}
+
+button.operator[_ngcontent-hvk-c48]:hover {
+    background: #6fabea;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #aaa;
+}
+
+button.operator[_ngcontent-hvk-c48] {
+    border: 1px solid #bbb;
+    border-radius: 1px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 4px 10px 0;
+    background-color: #ddd;
+    transition: border-color 0.2s ease-in-out, background-color 0.2s, box-shadow 0.2s;
+}
+
+button.numbers {
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 4px 10px 0;
+    background-color: #f9f9f9;
+    transition: border-color 0.2s ease-in-out, background-color 0.2s, box-shadow 0.2s;
+}
+
+button.numbers:hover {
+    background-color: #7aea86;
+    border-color: #bbb;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+}
+
+.calculator {
+    padding: 20px;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+    border-radius: 1px;
+    width: 40%;
+    margin: 4% auto;
+}
+
+button.equal {
+    text-align: center;
+    border: 1px solid #3079ed;
+    border-radius: 1px;
+    /* width: 36%; */
+    padding: 108px 17px;
+    margin: -56px 6px 10px 0;
+    background: #4d90fe;
+}
+
+@media screen and (max-width: 767px){
+    .calculator{
+        width: 85%;
+    }
+
+    button.operator{
+        width: 60px;
+    }
+
+    .panel{
+        display: inline-block;
+    }
+button.equal{
+    text-align: center;
+    border: 1px solid #3079ed;
+    border-radius: 1px;
+    background: #4d90fe;
+    width: 100%;
+    padding: 10px;
+    margin: 4% auto;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+

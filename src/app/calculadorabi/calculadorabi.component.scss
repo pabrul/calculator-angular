@@ -1,0 +1,39 @@
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    margin:  auto;
+  
+}
+
+button {
+    margin: 10px;
+}
+
+button.btn.btn-danger {
+    width: 192%;
+}
+
+.result{
+    width: 48%;
+    margin: auto; 
+}
+
+@media screen and (max-width:767px){
+    button.btn.btn-danger {
+        width: 190%;
+    }
+
+    .buttons{
+        width: 100%;
+    }
+
+    .result {
+        width: 95%;
+        margin: auto;
+    }
+
+    .form-group {
+        margin-bottom: 0rem;
+    }
+}
