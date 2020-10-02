@@ -32,6 +32,8 @@ export class CalculadorabiComponent implements OnInit {
       let bin:string;
       bin = eval(this.resultado).toString();
       this.calc = this.corrigirBin(String(bin));
+    }else{
+      this.calc = "";
     }
   }
 
