@@ -8,12 +8,11 @@ import { DatashareService } from '../datashare.service';
   styleUrls: ['./calculadorabi.component.scss']
 })
 export class CalculadorabiComponent implements OnInit {
-
+  
   public resultado:string = "";
   public calc:string = "";
   public history:string = "";
   public flag:boolean = false;
-  
 
   constructor(private validacao:ValidacaoService, private data: DatashareService) { }
 
@@ -75,6 +74,7 @@ export class CalculadorabiComponent implements OnInit {
       this.resultado = "";
       this.calc = "";
       this.history = "";
+      this.data.changeData(this.history);
     }else{
     this.resultado = "";
     this.calc = "";
