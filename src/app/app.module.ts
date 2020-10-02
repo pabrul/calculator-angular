@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { CalculadorabiComponent } from './calculadorabi/calculadorabi.component';
+import { HistoryComponent} from './history/history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CalculadoraComponent,
-    CalculadorabiComponent
+    CalculadorabiComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

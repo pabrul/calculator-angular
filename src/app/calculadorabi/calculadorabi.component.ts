@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidacaoService } from './../validacao.service';
+import { DatashareService } from '../datashare.service';
+
 @Component({
   selector: 'app-calculadorabi',
   templateUrl: './calculadorabi.component.html',
@@ -11,10 +13,12 @@ export class CalculadorabiComponent implements OnInit {
   public calc:string = "";
   public history:string = "";
   public flag:boolean = false;
+  
 
-  constructor(private validacao:ValidacaoService) { }
+  constructor(private validacao:ValidacaoService, private data: DatashareService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.data.currentData.subscribe(history => this.history = history)
   }
 
   public montarResultado(digito:string):void{
@@ -44,6 +48,7 @@ export class CalculadorabiComponent implements OnInit {
     this.flag = true;
     this.calc = this.corrigirBin(String(bin));
     this.history += this.resultado+"= "+this.calc+"\n";
+    this.data.changeData(this.history);
   }
 
   public corrigirBin(binario:string):string{
@@ -75,5 +80,7 @@ export class CalculadorabiComponent implements OnInit {
     this.calc = "";
     }
   }
+
+
 
 }
