@@ -9,7 +9,8 @@ export class CalculadorabiComponent implements OnInit {
 
   public resultado:string = "";
   public calc:string = "";
-  public history:string= "";
+  public history:string = "";
+  public flag:boolean = false;
 
   constructor(private validacao:ValidacaoService) { }
 
@@ -17,6 +18,10 @@ export class CalculadorabiComponent implements OnInit {
   }
 
   public montarResultado(digito:string):void{
+    if (this.validacao.isClear(digito, this.flag)){
+      this.resultado = "";
+      this.flag = false
+    }
     if(this.validacao.ehValidaExpressao(digito,this.resultado)){
       this.resultado += digito;
     }
@@ -26,7 +31,7 @@ export class CalculadorabiComponent implements OnInit {
     let bin:string;
 
     bin = eval(this.resultado).toString();
-    
+    this.flag = true;
     this.calc = this.corrigirBin(String(bin));
     this.history += this.resultado+"= "+this.calc+"\n";
   }

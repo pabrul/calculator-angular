@@ -7,7 +7,6 @@ export class ValidacaoService {
 
   constructor() { }
 
-
   ehOperador(caractere:string):boolean{
     let ehOp = false;
     if(caractere=="+" || caractere=="-" || caractere=="*" || caractere=="/"){
@@ -22,6 +21,16 @@ export class ValidacaoService {
       ehZero = true;
     }
     return ehZero;
+  }
+  hasOperator(expression:string):boolean{
+      let has:boolean = false;
+      for(let i = 0; i < expression.length; i++){
+        if(expression.charAt(i)=="+"){
+          has = true;
+          break;
+        }
+      }
+    return has;
   }
 
   ehZeroDepoisDeOperador(caractere:string, expressao:string):boolean{
@@ -41,6 +50,11 @@ export class ValidacaoService {
       return false;
     }
   }
+  isOperatorAfterExpression(caracter:string, expression:string):boolean{
+    if(this.ehOperador(caracter) && this.hasOperator(expression)){
+      return true;
+    }else return false;
+  }
 
   ehValidaExpressao(caractere:string, expressao:string):boolean{
     let ehValida = true;
@@ -54,10 +68,18 @@ export class ValidacaoService {
       }
       else if(this.ehOperadorDepoisDeOperador(caractere,expressao)){
         ehValida = false;
+      }else if (this.isOperatorAfterExpression(caractere,expressao)){
+        ehValida = false;
       }
     }
     
     return ehValida;
   }
-  
+  isClear(caracter:string, mark:boolean):boolean{
+    if((caracter == '1'||caracter == '0') && mark){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
