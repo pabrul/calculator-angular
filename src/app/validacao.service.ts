@@ -50,6 +50,16 @@ export class ValidacaoService {
       return false;
     }
   }
+  isSecondNumber(expression:string):boolean{
+    let sNumber:boolean = false;
+    for(let i = 0; i < expression.length; i++){
+      if(expression.charAt(i)=="+" && expression.charAt(i+1)== '1'){
+        sNumber = true;
+        break;
+      }
+    }
+  return sNumber;
+  }
   isOperatorAfterExpression(caracter:string, expression:string):boolean{
     if(this.ehOperador(caracter) && this.hasOperator(expression)){
       return true;

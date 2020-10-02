@@ -25,6 +25,14 @@ export class CalculadorabiComponent implements OnInit {
     if(this.validacao.ehValidaExpressao(digito,this.resultado)){
       this.resultado += digito;
     }
+    this.updateCalc(this.resultado);
+  }
+  public updateCalc(expression:string):void{
+    if(this.validacao.isSecondNumber(expression)){
+      let bin:string;
+      bin = eval(this.resultado).toString();
+      this.calc = this.corrigirBin(String(bin));
+    }
   }
 
   public finalizar():void{
@@ -36,7 +44,7 @@ export class CalculadorabiComponent implements OnInit {
     this.history += this.resultado+"= "+this.calc+"\n";
   }
 
-  corrigirBin(binario:string){
+  public corrigirBin(binario:string):string{
     let corrigido:string = "";
     let aux:Number = 0;
     for(let i = binario.length-1; i >= 0; i--){
