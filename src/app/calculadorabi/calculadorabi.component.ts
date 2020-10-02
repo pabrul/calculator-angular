@@ -28,7 +28,7 @@ export class CalculadorabiComponent implements OnInit {
     bin = eval(this.resultado).toString();
     
     this.calc = this.corrigirBin(String(bin));
-    this.history = this.resultado+"\n"+this.calc;
+    this.history += this.resultado+"= "+this.calc+"\n";
   }
 
   corrigirBin(binario:string){
