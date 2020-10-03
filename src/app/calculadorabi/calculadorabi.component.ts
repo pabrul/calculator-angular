@@ -74,6 +74,10 @@ export class CalculadorabiComponent implements OnInit {
   }
 
   limpar(option:string){
+    let hide:any = document.getElementById("calc0");
+    let hide2:any = document.getElementById("calc2");
+    hide.style.display = "none";
+    hide2.style.display = "none";
     if (option == 'C'){
       this.resultado = "";
       this.calc = "";
@@ -82,10 +86,6 @@ export class CalculadorabiComponent implements OnInit {
     }else{
     this.resultado = "";
     this.calc = "";
-    let hide:any = document.getElementById("calc0");
-    let hide2:any = document.getElementById("calc2");
-    hide.style.display = "none";
-    hide2.style.display = "none";
     }
   }
 
