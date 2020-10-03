@@ -1,2 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+
+body{
+    background-color: #484497 !important;
+  }
+
+  .bg-dark {
+    background-color: #4c47a1 !important;
+}
+  
+
+h3 {
+    color: white;
+}
+
+
+#title_anima {
+	-webkit-animation: title_anima 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: title_anima 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+  
+
+ @-webkit-keyframes title_anima {
+	0% {
+	  letter-spacing: -0.5em;
+	  opacity: 0;
+	}
+	40% {
+	  opacity: 0.6;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  @keyframes title_anima {
+	0% {
+	  letter-spacing: -0.5em;
+	  opacity: 0;
+	}
+	40% {
+	  opacity: 0.6;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  
