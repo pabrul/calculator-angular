@@ -43,14 +43,14 @@ export class CalculadorabiComponent implements OnInit {
   public finalizar():void{
     let bin:string;
     let hide:any = document.getElementById("calc0");
-    let hide2:any = document.getElementById("calc2");
+    /*let hide2:any = document.getElementById("calc2");*/
 
     bin = eval(this.resultado).toString();
     this.flag = true;
     this.calc = this.corrigirBin(String(bin));
     this.history += this.resultado+"= "+this.calc+"\n";
     hide.style.display = "block";
-    hide2.style.display = "block";
+    /*hide2.style.display = "block";*/
     this.data.changeData(this.history);
   }
 
@@ -75,9 +75,9 @@ export class CalculadorabiComponent implements OnInit {
 
   limpar(option:string){
     let hide:any = document.getElementById("calc0");
-    let hide2:any = document.getElementById("calc2");
+    /*let hide2:any = document.getElementById("calc2");*/
     hide.style.display = "none";
-    hide2.style.display = "none";
+    /*hide2.style.display = "none";*/
     if (option == 'C'){
       this.resultado = "";
       this.calc = "";
