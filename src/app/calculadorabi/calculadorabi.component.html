@@ -18,37 +18,7 @@
     <h3 style="text-align: center;">CALCULADORA BINARIA</h3>
 <div class="total">
 
-    <div class="calculator2">
-        <div class="result">
-            <div class="form-group">
-                <input type="text" [(ngModel)]="resultado" class="form-control" readonly="readonly">
-            </div>
     
-            <div class="form-group">
-                <label>{{calc}}</label>
-            </div>
-
-            <div class="form-group">
-                <label>{{history}}</label>
-            </div>
-        </div>
-         
-
-        <div class="buttons"> 
-        <button (click)="montarResultado('0')" type="button" class="">0</button>
-      
-        <button (click)="montarResultado('1')" type="button" class="">1</button>
-    
-        <button (click)="montarResultado('+')" type="button" id="three_grid" class="">+</button>
-    
-        <button (click)="limpar('CE')" type="button" class="">CE</button>
-
-        <button (click)="limpar('C')" type="button" class="">C</button>
-        
-        <button (click)="finalizar()" type="button" id="three_grid" class=" " >=</button>
-        </div>
-
-    </div>
 
     <div class="svg-calc">
         <div class="img">
@@ -207,10 +177,45 @@
         </div>
     </div>
 
+    <div class="calculator2">
+        <div class="result">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="resultado" class="form-control" readonly="readonly">
+            </div>
+    
+            <div class="form-group" id="calc0">
+                <label>{{calc}}</label>
+            </div>
+
+            <div class="form-group" id="calc2">
+                <label>{{history}}</label>
+            </div>
+        </div>
+         
+
+        <div class="buttons"> 
+        <button (click)="montarResultado('0')" type="button" class="">0</button>
+      
+        <button (click)="montarResultado('1')" type="button" class="">1</button>
+    
+        <button (click)="montarResultado('+')" type="button" id="three_grid" class="">+</button>
+    
+        <button (click)="limpar('CE')" type="button" class="">CE</button>
+
+        <button (click)="limpar('C')" type="button" class="">C</button>
+        
+        <button (click)="finalizar()" type="button" id="three_grid" class=" " >=</button>
+        </div>
+
+    </div>
+
 <div class="back">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3a3768" fill-opacity="5" d="M0,32L48,37.3C96,43,192,53,288,90.7C384,128,480,192,576,208C672,224,768,192,864,149.3C960,107,1056,53,1152,42.7C1248,32,1344,64,1392,80L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg></div>
 
 </div>
+
+
+
 
 <style>
 body {
