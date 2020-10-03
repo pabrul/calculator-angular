@@ -18,7 +18,8 @@ const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'calculadora', component: CalculadoraComponent },
     { path: 'calculadorabi', component: CalculadorabiComponent },
-    { path: 'history', component: HistoryComponent }
+    { path: 'history', component: HistoryComponent },
+    { path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
