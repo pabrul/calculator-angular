@@ -22,6 +22,40 @@
 
     
 
+    
+
+    <div class="calculator2">
+        <div class="result">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="resultado" class="form-control" readonly="readonly">
+            </div>
+    
+            <div class="form-group" id="calc0">
+                <label>{{calc}}</label>
+            </div>
+
+            <div class="form-group" id="calc2">
+                <label>{{history}}</label>
+            </div>
+        </div>
+         
+
+        <div class="buttons"> 
+        <button (click)="montarResultado('0')" type="button hvr-buzz" class="">0</button>
+      
+        <button (click)="montarResultado('1')" type="button" class="">1</button>
+    
+        <button (click)="montarResultado('+')" type="button" id="three_grid" class="">+</button>
+    
+        <button (click)="limpar('CE')" type="button" class="">CE</button>
+
+        <button (click)="limpar('C')" type="button" class="">C</button>
+        
+        <button (click)="finalizar()" type="button" id="three_grid" class=" " >=</button>
+        </div>
+
+    </div>
+
     <div class="svg-calc">
         <div class="img">
             <svg width="100%" height="100%" viewBox="0 0 1028 784" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,38 +211,6 @@
                 </svg>
                 
         </div>
-    </div>
-
-    <div class="calculator2">
-        <div class="result">
-            <div class="form-group">
-                <input type="text" [(ngModel)]="resultado" class="form-control" readonly="readonly">
-            </div>
-    
-            <div class="form-group" id="calc0">
-                <label>{{calc}}</label>
-            </div>
-
-            <div class="form-group" id="calc2">
-                <label>{{history}}</label>
-            </div>
-        </div>
-         
-
-        <div class="buttons"> 
-        <button (click)="montarResultado('0')" type="button hvr-buzz" class="">0</button>
-      
-        <button (click)="montarResultado('1')" type="button" class="">1</button>
-    
-        <button (click)="montarResultado('+')" type="button" id="three_grid" class="">+</button>
-    
-        <button (click)="limpar('CE')" type="button" class="">CE</button>
-
-        <button (click)="limpar('C')" type="button" class="">C</button>
-        
-        <button (click)="finalizar()" type="button" id="three_grid" class=" " >=</button>
-        </div>
-
     </div>
 
 <div class="back">
