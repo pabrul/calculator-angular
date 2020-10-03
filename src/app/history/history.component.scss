@@ -21,13 +21,55 @@
     border: 1px solid #ffffff;
     text-align: center;
     padding: 10px;
-    box-shadow: 0px 1px 4px 0px black;
     width: 70% !important;
     margin: 4% auto;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 1px 4px 0px black;
+    text-shadow: 0px 1px 4px #484497;
+    font-stretch: ultra-expanded;
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 2px;
 }
 
 body{
     background-color: #484497 !important;
   }
+
+  .myButton {
+    box-shadow: -3px 2px 50px 0px #9fb4f2;
+    background-color: #484497;
+    border-radius: 42px;
+    border: 3px solid #ffffff3b;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 17px 16px;
+    text-decoration: none;
+    text-shadow: -16px 4px 50px #484497;
+    width: 15%;
+    height: 50px;
+}
+.myButton:hover {
+	background-color:rgb(210 209 231);
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.chat.col-md-12 {
+    position: fixed;
+    left: 76%;
+    top: 75%;
+}
+
+i.fas.fa-eraser {
+    font-size: 25px;
+    position: absolute;
+    left: 7%;
+    top: 24%;
+}

@@ -13,7 +13,9 @@
         </div>
     </div>-->
 
-    <div class="new-line" *ngFor="let operation of this.operations">{{operation}}</div>
+    <div class="new-line" id="line-new-2" *ngFor="let operation of this.operations">{{operation}}</div>
     <div class="new-line" *ngIf="operations.length == 0">Sem historico de cálculo</div>
-
+<div class="chat col-md-12">
+    <button (click)="limpar('CE')" type="button" class="myButton"><i class="fas fa-eraser"></i></button>
+</div>
 </div>
