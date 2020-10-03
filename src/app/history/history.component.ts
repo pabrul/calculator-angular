@@ -30,5 +30,19 @@ export class HistoryComponent implements OnInit {
     console.log(array);
     console.log(this.operations);  
   }
+  clearArray(ar:string[]):void{
+    let length:number = ar.length;
+    let i:number;
+
+    for(i = 0; i < length; i++){
+      ar.pop();
+    }
+  }
+  limpar(){
+    //this.hideResul();
+      this.clearArray(this.operations);
+      this.data = "";
+      this.datas.changeData(this.data);
+  }
   
 }
