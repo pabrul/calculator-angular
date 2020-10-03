@@ -16,8 +16,7 @@ export class HistoryComponent implements OnInit {
 
   ngOnInit() {
     this.datas.currentData.subscribe(data => this.data = data);
-    //this.generateHTML();
-    this.operations = this.separeteOperations(this.data)
+    this.generateHTML();
   }
   
   separeteOperations(expression:string):string[]{
@@ -26,16 +25,10 @@ export class HistoryComponent implements OnInit {
   }
   generateHTML():void{
     let array:string[] = this.separeteOperations(this.data);
-    let i:number;
-    let divId = document.getElementById("line-new");
-    divId.innerHTML = "";
-    console.log("Entrou");
-    for(i = 0; i < array.length; i++){
-      let html:string = "<div class='new-line' id='line-new"+i+">"+array[i]+"</div>";
-      divId.innerHTML += html;
-      console.log(i)
-      console.log(array[i])
-       // divId.innerHTML += "<label style='width: 500px;white-space: pre-line' id='line-new"+i+">"+array[i]+"</label>";  
-    }
+    array.pop();
+    this.operations = array
+    console.log(array);
+    console.log(this.operations);  
   }
+  
 }
