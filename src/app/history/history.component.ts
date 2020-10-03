@@ -10,12 +10,16 @@ import { DatashareService } from '../datashare.service';
 export class HistoryComponent implements OnInit {
 
   public data:string;
+  public operations:string[];
 
   constructor(private datas: DatashareService) { }
 
   ngOnInit() {
-    this.datas.currentData.subscribe(data => this.data = data)
+    this.datas.currentData.subscribe(data => this.data = data);
+    //this.generateHTML();
+    this.operations = this.separeteOperations(this.data)
   }
+  
   separeteOperations(expression:string):string[]{
     let separeted:string[] = expression.split('\n');
     return separeted
@@ -25,8 +29,13 @@ export class HistoryComponent implements OnInit {
     let i:number;
     let divId = document.getElementById("line-new");
     divId.innerHTML = "";
+    console.log("Entrou");
     for(i = 0; i < array.length; i++){
-      divId.innerHTML += "<div class='new-line' id='line-new"+i+">"+array[i]+"</div>"
+      let html:string = "<div class='new-line' id='line-new"+i+">"+array[i]+"</div>";
+      divId.innerHTML += html;
+      console.log(i)
+      console.log(array[i])
+       // divId.innerHTML += "<label style='width: 500px;white-space: pre-line' id='line-new"+i+">"+array[i]+"</label>";  
     }
   }
 }
