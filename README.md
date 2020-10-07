@@ -37,11 +37,15 @@ A propriedade CSS abreviada animation, aplica uma animação entre estilos.
 A Propriedade CSS transform permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.
 
 DESKTOP:
+
+
 ![image](https://user-images.githubusercontent.com/55573363/95273635-ed196080-0819-11eb-8d4c-aabbb2c22da2.png)
 ![image](https://user-images.githubusercontent.com/55573363/95273656-ff939a00-0819-11eb-9dc5-fbf68c74f234.png)
 ![image](https://user-images.githubusercontent.com/55573363/95273684-0d491f80-081a-11eb-9744-c3ca36d91347.png)
 
 MOBILE:
+
+
 ![image](https://user-images.githubusercontent.com/55573363/95273722-23ef7680-081a-11eb-9cb2-93e05d69d58b.png)
 ![image](https://user-images.githubusercontent.com/55573363/95273739-2d78de80-081a-11eb-83a8-10ec90bcdbac.png)
 ![image](https://user-images.githubusercontent.com/55573363/95273756-3a95cd80-081a-11eb-8d98-ed8820136811.png)
