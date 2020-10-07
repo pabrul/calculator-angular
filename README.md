@@ -1,27 +1,37 @@
-# Calculadora
+Pequeno projeto de desenvolvimento de uma calculadora binaria feito em Angular com
+meu amigos de classe Filipe Borges(github.com/Starkill3r) e Matheus de Carvalho(github.com/MathOak).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+Um adendo sobre o projeto, utilizei os seguintes elementos:
 
-## Development server
+0 - Angular: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Angular é uma plataforma de aplicações web de código-fonte aberto e front-end baseado em TypeScript liderado pela Equipe Angular do Google.
 
-## Code scaffolding
+1 - TypeScript:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+TypeScript é um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem e alguns outros recursos a linguagem.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2 -  Grid:
 
-## Running unit tests
+É uma malha formada pela interseção de um conjunto de linhas horizontais e um conjunto de linhas verticais – um dos conjuntos define colunas e outro linhas. Dentro de um  grid, respeitando-se a configuração criada pelas suas linhas, pode-se inserir elementos da marcação.   
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3 - Breakpoints:
 
-## Running end-to-end tests
+São os pontos de quebra onde o layout será ajustado para atender diferentes resoluções. A partir destes pontos é que será possível estabelecer comandos CSS para que o site se comporte de forma adequada visualmente para cada dispositivo. 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+4 - Flexbox:
 
-## Further help
+O Flexible Box Module, geralmente chamado de flexbox, foi projetado tanto como um modelo de layout unidimensional quanto como um método capaz de organizar espacialmente os elementos em uma interface, além de possuir capacidades avançadas de alinhamento. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+5 - Keyframes:
+
+Como a sincronização da animação é definida por um estilo CSS que configura a animação, keyframes usam uma percentage para indicar o tempo durante a sequência de animação que eles fazem parte. 0% indica o primeiro momento da sequência de animação, enquanto 100% indica o estado final da animação.
+
+6 - Animation CSS:
+
+A propriedade CSS abreviada animation, aplica uma animação entre estilos.
+
+7 - Transform CSS:
+
+A Propriedade CSS transform permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.
